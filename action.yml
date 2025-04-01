@@ -1,4 +1,4 @@
-name: 'tauri-action'
+name: 'tauri-action-oss'
 description: 'Build tauri binaries for MacOS, Windows and Linux'
 author: 'Lucas Nogueira <lucas@tauri.studio>'
 branding:
@@ -58,6 +58,14 @@ inputs:
     description: 'The account owner of the repository'
   repo:
     description: 'The name of the repository'
+  access-key-id:
+    description: 'The access key id to use for the upload'
+  access-key-secret:
+    description: 'The access key secret to use for the upload'
+  bucket:
+    description: 'The bucket to use for the upload'
+  endpoint:
+    description: 'The endpoint to use for the upload'
 outputs:
   releaseId:
     description: 'The ID of the created release'
