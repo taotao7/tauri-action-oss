@@ -26,6 +26,7 @@
     "@actions/core": "1.11.1",
     "@actions/github": "6.0.0",
     "@iarna/toml": "2.2.5",
+    "ali-oss": "^6.22.0",
     "execa": "9.5.2",
     "globby": "14.0.2",
     "json5": "2.2.3",
@@ -34,17 +35,20 @@
   },
   "devDependencies": {
     "@eslint/js": "9.22.0",
+    "@types/ali-oss": "^6.16.11",
     "@types/node": "22.13.10",
     "@vercel/ncc": "0.38.3",
     "covector": "0.12.4",
     "eslint": "9.22.0",
     "eslint-config-prettier": "10.1.1",
     "prettier": "3.5.3",
+    "tsx": "^4.19.3",
     "typescript": "5.8.2",
     "typescript-eslint": "8.26.1"
   },
   "engines": {
     "pnpm": "^10.0.0",
     "node": ">=20"
-  }
+  },
+  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3"
 }

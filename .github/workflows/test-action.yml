@@ -100,6 +100,10 @@ jobs:
           releaseBody: 'See the assets to download this version and install.'
           releaseDraft: true
           args: ${{ matrix.args }}
+          access-key-id: ${{ ACCESS_KEY_ID }}
+          access-key-secret: ${{ ACCESS_KEY_SECRET }}
+          bucket: ${{ BUCKET }}
+          endpoint: ${{ ENDPOINT }}
 
   v2:
     strategy:
@@ -195,3 +199,7 @@ jobs:
           releaseBody: 'See the assets to download this version and install.'
           releaseDraft: true
           args: ${{ matrix.args }}
+          access-key-id: ${{ ACCESS_KEY_ID }}
+          access-key-secret: ${{ ACCESS_KEY_SECRET }}
+          bucket: ${{ BUCKET }}
+          endpoint: ${{ ENDPOINT }}

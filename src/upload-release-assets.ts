@@ -4,6 +4,8 @@ import { getOctokit } from '@actions/github';
 
 import { getAssetName } from './utils';
 import type { Artifact } from './types';
+import { createClient } from './oss';
+import OSS from 'ali-oss';
 
 export async function uploadAssets(
   owner: string,
@@ -57,6 +59,16 @@ export async function uploadAssets(
     }
 
     console.log(`Uploading ${assetName}...`);
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const client: OSS = createClient();
+
+    await client.multipartUpload(assetName, asset.path, {
+      progress: function (p) {
+        //progress is generator
+        console.log(`${assetName} progress`, p * 100);
+      },
+    });
 
     await github.rest.repos.uploadReleaseAsset({
       headers,

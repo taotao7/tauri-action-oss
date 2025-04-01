@@ -77,6 +77,10 @@ jobs:
           releaseDraft: true
           prerelease: false
           args: ${{ matrix.args }}
+          access-key-id: ${{ ACCESS_KEY_ID }}
+          access-key-secret: ${{ ACCESS_KEY_SECRET }}
+          bucket: ${{ BUCKET }}
+          endpoint: ${{ ENDPOINT }}
 ```
 
 ## Inputs
