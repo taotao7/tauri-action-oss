@@ -7,6 +7,7 @@ export const createClient = (): OSS => {
   const accessKeySecret = core.getInput('access-key-secret');
   const bucket = core.getInput('bucket');
   const endpoint = core.getInput('endpoint');
+  console.log(accessKeyId, accessKeySecret, bucket, endpoint);
 
   if (!accessKeyId || !accessKeySecret || !bucket || !endpoint) {
     throw new Error('Missing required input');
