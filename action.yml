@@ -64,8 +64,8 @@ inputs:
     description: 'The access key secret to use for the upload'
   bucket:
     description: 'The bucket to use for the upload'
-  endpoint:
-    description: 'The endpoint to use for the upload'
+  region:
+    description: 'The region to use for the upload'
 outputs:
   releaseId:
     description: 'The ID of the created release'
